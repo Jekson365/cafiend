@@ -1,25 +1,32 @@
-import { AppBar, Box, Stack, Toolbar, Typography, styled, Grid } from '@mui/material'
-import { ColorDark, ColorPrimary } from '../styles/styles'
+import { AppBar, Box, Stack, Toolbar, Typography, styled, Grid, Slide } from '@mui/material'
+import { ColorDark, ColorPrimary, MinorFont } from '../styles/styles'
 import { NavLink } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from 'react';
+import Search from './Search';
 
 
 
 
 const Navigation = () => {
+    const [nav, setNav] = useState<boolean>(true)
+    const [search, setSearch] = useState<boolean>(false)
+
     return (
         <>
-
+            <Search search={search} setSearch={setSearch} />
             <Box
             >
                 <CustomAppBar
-                    sx={{ marginTop: { xs: "0", md: "40px" } }}
+                    sx={{ marginTop: { xs: "0", md: "40px" }, zIndex: "1000" }}
 
                 >
                     <CustomToolBar
                         sx={{ height: "80px" }}
+
+
                     >
                         <Grid
                             container
@@ -28,32 +35,34 @@ const Navigation = () => {
                         >
                             <Grid item xs={0} md={4}
                             >
-                                <Stack
-                                    sx={stackStyles}
-                                >
-                                    <NavLink to={'/'}>
+                                <Slide direction='down' in={nav}>
+                                    <Stack
+                                        sx={{ ...stackStyles, zIndex: "-1000000" }}
+                                    >
+                                        <NavLink to={'/'}>
+                                            <CustomText>
+                                                Home
+                                            </CustomText>
+                                        </NavLink>
                                         <CustomText>
-                                            Home
+                                            pages
                                         </CustomText>
-                                    </NavLink>
-                                    <CustomText>
-                                        pages
-                                    </CustomText>
-                                    <NavLink to={'/shop'}>
-                                        <CustomText>
-                                            shop
-                                        </CustomText>
-                                    </NavLink>
-                                    <NavLink to={'/blog'}>
-                                        <CustomText>
-                                            blog
-                                        </CustomText>
-                                    </NavLink>
-                                </Stack>
+                                        <NavLink to={'/shop'}>
+                                            <CustomText>
+                                                shop
+                                            </CustomText>
+                                        </NavLink>
+                                        <NavLink to={'/blog'}>
+                                            <CustomText>
+                                                blog
+                                            </CustomText>
+                                        </NavLink>
+                                    </Stack>
+                                </Slide>
                             </Grid>
                             <Grid item xs={4} md={4}>
                                 <Box
-                                    sx={{ width: "150px", margin: "0 auto" }}
+                                    sx={{ width: "150px", margin: { xs: "0 0", md: "0 auto" } }}
                                 >
                                     <img
                                         style={{ "width": "100%", height: "100%", objectFit: "cover" }}
@@ -69,13 +78,20 @@ const Navigation = () => {
                                     justifyContent={'flex-end'}
                                     color={ColorDark}
                                     direction={"row"}
-                                    sx={{ display: { xs: "none", md: "flex" } }}
                                 >
-                                    <SearchIcon sx={{ fontSize: "30px" }} />
-                                    <ShoppingCartIcon sx={{ fontSize: "30px" }} />
+                                    <BarStyles
+                                        onClick={() => setNav(!nav)}
+                                        sx={{ display: { xs: "block", md: "none" }, background: nav ? ColorPrimary : ColorDark }}>
+                                        <MenuIcon sx={{ fontSize: "30px", color: !nav ? ColorPrimary : ColorDark }} />
+                                    </BarStyles>
+                                    <Stack direction={'row'} gap={'20px'} sx={{ display: { xs: "none", md: "flex" } }}>
+                                        <SearchIcon
 
+                                            onClick={() => setSearch(!search)}
+                                            sx={{ fontSize: "30px",cursor:"pointer"}} />
+                                        <ShoppingCartIcon sx={{ fontSize: "30px" }} />
+                                    </Stack>
                                 </Stack>
-                                <MenuIcon sx={{ color: ColorDark, marginRight: "40px", display: { xs: "block", md: "none" } }} />
                             </Grid>
                         </Grid>
                     </CustomToolBar>
@@ -86,9 +102,24 @@ const Navigation = () => {
 }
 
 
+const BarStyles = styled(Box)({
+    background: ColorDark,
+    color: ColorPrimary,
+    padding: "5px",
+    display: "flex",
+    width: "30px",
+    height: "30px",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: "5px",
+    cursor: "pointer",
+    border: `0.5px solid ${ColorDark}`,
+    transform: "translateX(-10px)",
+})
+
 const CustomText = styled(Typography)({
     textDecoration: "none",
-    fontFamily: "'Oswald', sans-serif",
+    fontFamily: MinorFont,
     textTransform: "uppercase",
     color: ColorDark,
     cursor: "pointer",
@@ -112,7 +143,7 @@ const stackStyles = {
     },
     background: ColorPrimary,
     top: "80px",
-    padding:"10px",
+    padding: "10px",
     left: "0",
     width: "100%",
 

@@ -7,8 +7,14 @@ import Shop from './shop/Shop'
 import Blog from './blog/Blog'
 import Navigation from './components/Navigation'
 import Notification from './components/Notification'
+import { useEffect } from 'react'
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 
 function App() {
+  useEffect(() => {
+    AOS.init()
+  })
 
   return (
     <>
