@@ -6,19 +6,19 @@ import CloseIcon from '@mui/icons-material/Close';
 const Search = ({ search, setSearch }: { search: boolean, setSearch: (search: boolean) => void }) => {
     return (
         <>
-            <Fade in={search}>
-                <Box
-                    sx={{ ...searchStyles }}
-                >
-                    <Box sx={{ width: "100%", maxWidth: "1400px" }}>
-                        <Stack direction={'row'} gap={"20px"} width={"100%"} alignItems={"center"}>
-                            <SearchIcon sx={{ fontSize: "35px" }} />
-                            <CustomInputFiled placeholder="Search..." />
-                            <CloseIcon sx={{ fontSize: "35px",cursor:"pointer"}} onClick={() => setSearch(!search)} />
-                        </Stack>
+                <Fade in={search}>
+                    <Box
+                        sx={{ ...searchStyles }}
+                    >
+                        <Box sx={{ width: "100%", maxWidth: "1400px" }}>
+                            <Stack direction={'row'} gap={"20px"} width={"100%"} alignItems={"center"}>
+                                <SearchIcon sx={{ fontSize: "35px" }} />
+                                <CustomInputFiled placeholder="Search..." />
+                                <CloseIcon sx={{ fontSize: "35px", cursor: "pointer" }} onClick={() => setSearch(!search)} />
+                            </Stack>
+                        </Box>
                     </Box>
-                </Box>
-            </Fade>
+                </Fade>
         </>
     )
 }
@@ -41,7 +41,7 @@ const searchStyles = {
     left: "0",
     height: "180px",
     background: ColorPrimary,
-    zIndex: "10000",
+    zIndex: "100000000",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",

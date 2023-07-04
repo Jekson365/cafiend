@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <>
             <Container
-                sx={{ background: ColorDark }}
+                sx={{ background: ColorDark}}
                 maxWidth={false}
             >
                 <Grid container columns={12}
@@ -51,7 +51,7 @@ const Hero = () => {
                     </Grid>
                     <Grid item xs={12} md={5}>
                         <Box
-                            sx={{ "position": "relative" }}
+                            sx={{ "position": "relative"}}
                             data-aos='fade-left'
                         >
                             <img src='https://uploads-ssl.webflow.com/643cd69e8bc0bcf1b4af13d5/6448f1f0c5a8a12093bfddfb_Coffee_Png.webp'

@@ -9,7 +9,7 @@ export const MinorFont = "'Oswald', sans-serif";
 
 export const MainButtonPrimary = styled(Button)({
     background: "transparent",
-    width:"235px",
+    width:"215px",
     fontFamily:MainFontLight,
     fontWeight:"bold",
     fontSize:"17px",
@@ -23,7 +23,7 @@ export const MainButtonPrimary = styled(Button)({
 
 export const MainButtonOutline = styled(Button)({
     background: "transparent",
-    width:"235px",
+    width:"215px",
     fontFamily:MainFontLight,
     fontWeight:"bold",
     fontSize:"17px",
@@ -38,7 +38,7 @@ export const MainButtonOutline = styled(Button)({
 
 export const MainButtonWhite = styled(Button)({
     background: ColorPrimary,
-    width:"235px",
+    width:"215px",
     fontFamily:MainFontLight,
     fontWeight:"bold",
     fontSize:"17px",

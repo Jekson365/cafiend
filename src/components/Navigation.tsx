@@ -9,24 +9,22 @@ import Search from './Search';
 
 
 
-
 const Navigation = () => {
-    const [nav, setNav] = useState<boolean>(true)
+    const [nav, setNav] = useState<boolean>(window.innerWidth > 900 ? true : false)
     const [search, setSearch] = useState<boolean>(false)
 
     return (
         <>
             <Search search={search} setSearch={setSearch} />
             <Box
+                sx={{ zIndex: "99999999", position: "sticky", top: "0" }}
             >
                 <CustomAppBar
-                    sx={{ marginTop: { xs: "0", md: "40px" }, zIndex: "1000" }}
+                    sx={{ marginTop: { xs: "0", md: "0px" }, zIndex: "1000", position: "sticky", top: "0" }}
 
                 >
                     <CustomToolBar
                         sx={{ height: "80px" }}
-
-
                     >
                         <Grid
                             container
@@ -37,7 +35,7 @@ const Navigation = () => {
                             >
                                 <Slide direction='down' in={nav}>
                                     <Stack
-                                        sx={{ ...stackStyles, zIndex: "-1000000" }}
+                                        sx={{ ...stackStyles, zIndex: "10000", width: "100%" }}
                                     >
                                         <NavLink to={'/'}>
                                             <CustomText>
@@ -88,7 +86,7 @@ const Navigation = () => {
                                         <SearchIcon
 
                                             onClick={() => setSearch(!search)}
-                                            sx={{ fontSize: "30px",cursor:"pointer"}} />
+                                            sx={{ fontSize: "30px", cursor: "pointer" }} />
                                         <ShoppingCartIcon sx={{ fontSize: "30px" }} />
                                     </Stack>
                                 </Stack>
@@ -152,6 +150,7 @@ const CustomAppBar = styled(AppBar)({
     background: ColorPrimary,
     boxShadow: "0 0 0 0",
 })
+
 const CustomToolBar = styled(Toolbar)({
     maxWidth: "1400px",
     display: "flex",
