@@ -11,20 +11,23 @@ const Prods = () => {
                 sx={{ background: ColorPrimary, minHeight: "100vh" }}
                 maxWidth={false}
             >
-                <Stack 
-                sx={{textAlign:{xs:"center",md:"inherit"}}}
-                direction={'column'} gap={'10px'} alignItems={'center'} pt={20} mb={6}>
+
+                <Stack
+                    sx={{ textAlign: { xs: "center", md: "inherit" } }}
+                    direction={'column'} gap={'10px'} alignItems={'center'} pt={20} mb={6}>
                     <Typography
                         fontFamily={MinorFont}
                         variant="h2"
                     >OUR BLENDS DELIVER
                     </Typography>
+
                     <Typography
                         fontWeight={'bold'}
                         fontFamily={MainFontLight}
                     >Hot, Cold, Sweet or straight up, we've got the brew for you.
                     </Typography>
-                    <MainButtonOutline sx={{"marginTop":"10px"}}>ALL PRODUCT</MainButtonOutline>
+
+                    <MainButtonOutline sx={{ "marginTop": "10px" }}>ALL PRODUCT</MainButtonOutline>
                 </Stack>
                 <Box sx={{ maxWidth: "1400px", margin: "0 auto" }}>
                     <Grid container columns={12} spacing={3}>
@@ -39,6 +42,7 @@ const Prods = () => {
                         })}
                     </Grid>
                 </Box>
+
             </Container>
         </>
     )

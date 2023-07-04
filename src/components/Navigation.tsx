@@ -148,7 +148,7 @@ const stackStyles = {
 }
 const CustomAppBar = styled(AppBar)({
     background: ColorPrimary,
-    boxShadow: "0 0 0 0",
+    boxShadow: "0 0 30px 0.1px rgba(0,0,0,0.3)",
 })
 
 const CustomToolBar = styled(Toolbar)({
