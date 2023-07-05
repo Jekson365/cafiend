@@ -8,13 +8,13 @@ const Prods = () => {
     return (
         <>
             <Container
-                sx={{ background: ColorPrimary, minHeight: "100vh" }}
+                sx={{ background: ColorPrimary, minHeight: "100vh", paddingBottom: "100px" }}
                 maxWidth={false}
             >
 
                 <Stack
                     sx={{ textAlign: { xs: "center", md: "inherit" } }}
-                    direction={'column'} gap={'10px'} alignItems={'center'} pt={20} mb={6}>
+                    direction={'column'} gap={'10px'} alignItems={'center'} pt={20} mb={0}>
                     <Typography
                         fontFamily={MinorFont}
                         variant="h2"
@@ -29,8 +29,8 @@ const Prods = () => {
 
                     <MainButtonOutline sx={{ "marginTop": "10px" }}>ALL PRODUCT</MainButtonOutline>
                 </Stack>
-                <Box sx={{ maxWidth: "1400px", margin: "0 auto" }}>
-                    <Grid container columns={12} spacing={3}>
+                <Box sx={{ maxWidth: "1400px", margin: "40px auto" }}>
+                    <Grid container columns={12}  spacing={3}>
                         {arr.map(() => {
                             return (
                                 <>
