@@ -1,5 +1,6 @@
 import Benefits from "./Benefits"
 import Hero from "./Hero"
+import Posts from "./Posts"
 import Prods from "./Prods"
 import Testimonial from "./Testimonial"
 import VidSection from "./VidSection"
@@ -12,6 +13,7 @@ const Home = () => {
       <VidSection/>
       <Benefits/>
       <Testimonial/>
+      <Posts/>
     </>
   )
 }
