@@ -8,7 +8,7 @@ const Search = ({ search, setSearch }: { search: boolean, setSearch: (search: bo
         <>
                 <Fade in={search}>
                     <Box
-                        sx={{ ...searchStyles }}
+                        sx={{ ...searchStyles,position:"fixed",top:"0",width:"100%" }}
                     >
                         <Box sx={{ width: "100%", maxWidth: "1400px" }}>
                             <Stack direction={'row'} gap={"20px"} width={"100%"} alignItems={"center"}>

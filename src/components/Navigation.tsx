@@ -17,10 +17,10 @@ const Navigation = () => {
         <>
             <Search search={search} setSearch={setSearch} />
             <Box
-                sx={{ zIndex: "99999999", position: "sticky", top: "0" }}
+                sx={{ zIndex: "99999999", position: "sticky", top: "0", left: "0" }}
             >
                 <CustomAppBar
-                    sx={{ marginTop: { xs: "0", md: "0px" }, zIndex: "1000", position: "sticky", top: "0" }}
+                    sx={{ marginTop: { xs: "0", md: "0px" }, zIndex: "1000" }}
 
                 >
                     <CustomToolBar
@@ -71,7 +71,7 @@ const Navigation = () => {
                                 sx={{ justifyContent: { xs: "flex-end", md: "flex-end", display: { xs: "flex", md: "block" } } }}
                             >
                                 <Stack
-                                    mr={3}
+                                    sx={{ marginRight: { xs: "20px", md: "40px" } }}
                                     gap={'20px'}
                                     justifyContent={'flex-end'}
                                     color={ColorDark}
@@ -84,7 +84,6 @@ const Navigation = () => {
                                     </BarStyles>
                                     <Stack direction={'row'} gap={'20px'} sx={{ display: { xs: "none", md: "flex" } }}>
                                         <SearchIcon
-
                                             onClick={() => setSearch(!search)}
                                             sx={{ fontSize: "30px", cursor: "pointer" }} />
                                         <ShoppingCartIcon sx={{ fontSize: "30px" }} />
@@ -152,9 +151,9 @@ const CustomAppBar = styled(AppBar)({
 })
 
 const CustomToolBar = styled(Toolbar)({
-    maxWidth: "1400px",
     display: "flex",
     margin: "0 auto",
+    maxWidth: "1400px",
     width: "100%",
     justifyContent: "space-between"
 })

@@ -1,5 +1,7 @@
+import Footer from "../components/Footer"
 import Benefits from "./Benefits"
 import Hero from "./Hero"
+import Instposts from "./Instposts"
 import Posts from "./Posts"
 import Prods from "./Prods"
 import Testimonial from "./Testimonial"
@@ -14,6 +16,8 @@ const Home = () => {
       <Benefits/>
       <Testimonial/>
       <Posts/>
+      <Instposts/>
+      <Footer/>
     </>
   )
 }

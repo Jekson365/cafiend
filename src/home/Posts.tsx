@@ -40,8 +40,8 @@ const Posts = () => {
                         {arr.map((each) => {
                             return (
                                 <>
-                                    <Grid item xs={12} md={4}>
-                                        <Box sx={{ maxWidth: { xs: "90vw", md: "50vw" }, height: { xs: "92vw", md: "52vw" } }}>
+                                    <Grid item xs={12} md={4} display={'flex'} justifyContent={'center'}>
+                                        <Box sx={{ maxWidth: { xs: "90vw", md: "50vw" }, height: { xs: "92vw", md: "32vw" }, marginTop:{xs:"100px",md:"0"} }}>
                                             <Box
                                                 overflow={'hidden'}
                                             >
@@ -68,12 +68,13 @@ const Posts = () => {
         </>
     )
 }
+
 const hv = {
     "&:hover": {
-        "transform":"scale(1.5)",
+        "transform": "scale(1.5)",
     },
-    "transition":"1.9s",
-    "cursor":"pointer"
+    "transition": "1.9s",
+    "cursor": "pointer"
 }
 
 export default Posts

@@ -9,7 +9,7 @@ const Testimonial = () => {
         <>
             <Container
                 maxWidth={false}
-                sx={{ background: ColorPrimary, height: "60vh" }}
+                sx={{ background: ColorPrimary, height: "fit-content",padding:"70px 0"}}
             >
                 <Box
                     sx={{
@@ -26,7 +26,7 @@ const Testimonial = () => {
                         direction={'column'}
                         alignItems={'center'}
                         justifyContent={'center'}
-                        sx={{ marginTop: { xs: "0", md: "70px" },paddingTop:{xs:"40px",md:"0"}}}
+                        sx={{ marginTop: { xs: "0", md: "0px" },paddingTop:{xs:"40px",md:"0"}}}
                     >
 
                         <Typography
