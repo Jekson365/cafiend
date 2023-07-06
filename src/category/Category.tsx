@@ -1,7 +1,10 @@
+import Banner from "../components/Banner"
 
 const Category = () => {
   return (
-    <div>Category</div>
+    <>
+    <Banner title={'CATEGORY'}/>
+    </>
   )
 }
 

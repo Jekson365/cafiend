@@ -10,11 +10,13 @@ import Notification from './components/Notification'
 import { useEffect } from 'react'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
+import Footer from './components/Footer'
 
 function App() {
   useEffect(() => {
     AOS.init()
   })
+
 
   return (
     <>
@@ -29,6 +31,7 @@ function App() {
           <Route path='/shop' element={<Shop />} />
           <Route path='/blog' element={<Blog />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   )

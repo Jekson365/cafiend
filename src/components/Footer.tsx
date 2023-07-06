@@ -1,5 +1,6 @@
 import { Box, CardMedia, Container, Grid, Stack, Typography } from "@mui/material"
 import { ColorDark, ColorPrimary, MainFontLight, MinorFont } from "../styles/styles"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
@@ -11,7 +12,7 @@ const Footer = () => {
             >
                 <Box maxWidth={'1400px'} margin={'0 auto'} padding={'50px'}>
                     <Grid container columns={12} alignItems={'flex-start'} display={'flex'} spacing={3}>
-                        <Grid item xs={12} md={4}>
+                        <Grid item xs={12} md={4} data-aos='fade-right'>
                             <Stack direction={'column'} gap={'15px'} alignItems={'flex-start'}>
                                 <Typography
                                     color={ColorPrimary}
@@ -44,18 +45,20 @@ const Footer = () => {
                                 </Typography>
                             </Stack>
                         </Grid>
-                        <Grid item xs={12} md={4}>
+                        <Grid item xs={12} md={4} data-aos='fade-up'>
                             <Stack
                                 direction={'column'}
                                 alignItems={'center'}
                                 sx={{ alignItems: { xs: "flex-start", md: "center" }, textAlign: { xs: "start", md: "center" } }}
                                 gap={'15px'}
                             >
-                                <CardMedia
-                                    component={'img'}
-                                    src="https://uploads-ssl.webflow.com/643cd69e8bc0bcf1b4af13d5/646b51cfa94bf985becf7a2c_footer_Coffe_logo%20(1).svg"
-                                    sx={{ width: "150px" }}
-                                />
+                                <Link to={'/'}>
+                                    <CardMedia
+                                        component={'img'}
+                                        src="https://uploads-ssl.webflow.com/643cd69e8bc0bcf1b4af13d5/646b51cfa94bf985becf7a2c_footer_Coffe_logo%20(1).svg"
+                                        sx={{ width: "150px" }}
+                                    />
+                                </Link>
                                 <Typography
                                     fontSize={'14px'}
                                     fontWeight={'bold'}
@@ -67,8 +70,8 @@ const Footer = () => {
                                 </Typography>
                             </Stack>
                         </Grid>
-                        <Grid item xs={12} md={4}>
-                            <Stack direction={'column'} gap={'15px'} sx={{alignItems:{xs:"flex-start",md:"flex-end"}}}>
+                        <Grid item xs={12} md={4} data-aos='fade-left'>
+                            <Stack direction={'column'} gap={'15px'} sx={{ alignItems: { xs: "flex-start", md: "flex-end" } }}>
                                 <Typography
                                     color={ColorPrimary}
                                     variant="h4"

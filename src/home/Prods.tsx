@@ -3,7 +3,7 @@ import { ColorPrimary, MainButtonOutline, MainFontLight, MinorFont } from "../st
 import EachProd from "../components/EachProd"
 
 
-const Prods = () => {
+const Prods = ({ variant }: { variant: boolean }) => {
     const arr = [1, 1, 1, 1, 1, 1]
     return (
         <>
@@ -20,17 +20,15 @@ const Prods = () => {
                         variant="h2"
                     >OUR BLENDS DELIVER
                     </Typography>
-
-                    <Typography
+                    {variant ? <Typography
                         fontWeight={'bold'}
                         fontFamily={MainFontLight}
                     >Hot, Cold, Sweet or straight up, we've got the brew for you.
-                    </Typography>
-
-                    <MainButtonOutline sx={{ "marginTop": "10px" }}>ALL PRODUCT</MainButtonOutline>
+                    </Typography> : ""}
+                    {variant ? <MainButtonOutline sx={{ "marginTop": "10px" }}>ALL PRODUCT</MainButtonOutline> : ""}
                 </Stack>
                 <Box sx={{ maxWidth: "1400px", margin: "40px auto" }}>
-                    <Grid container columns={12}  spacing={3}>
+                    <Grid container columns={12} spacing={3}>
                         {arr.map(() => {
                             return (
                                 <>
@@ -42,7 +40,6 @@ const Prods = () => {
                         })}
                     </Grid>
                 </Box>
-
             </Container>
         </>
     )

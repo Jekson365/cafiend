@@ -1,7 +1,10 @@
+import Banner from "../components/Banner"
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+      <Banner title={'CONTACT US'}/>
+    </>
   )
 }
 

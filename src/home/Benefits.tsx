@@ -24,7 +24,7 @@ const Benefits = () => {
             >
                 <Box width={'80%'}>
                     <Grid container columns={12} spacing={10}>
-                        <Grid item xs={12} lg={7}>
+                        <Grid item xs={12} lg={7} data-aos='fade-right'>
                             <Stack
                                 sx={{ position: "sticky", top: "100px" }}
                             >
@@ -47,7 +47,7 @@ const Benefits = () => {
                                 </Typography>
                             </Stack>
                         </Grid>
-                        <Grid item xs={12} lg={5} spacing={3}>
+                        <Grid item xs={12} lg={5} spacing={3} data-aos='fade-left'> 
                             <Stack gap={'40px'}>
 
                                 {arr.map((each: any) => {
@@ -83,7 +83,7 @@ const Benefits = () => {
                                                         {each.lists.map((item: String) => {
                                                             return (
                                                                 <>
-                                                                    <ListItem sx={{ display: "list-item",fontSize:{xs:"13px",md:"18px"} }}>{item}</ListItem>
+                                                                    <ListItem sx={{ display: "list-item", fontSize: { xs: "13px", md: "18px" } }}>{item}</ListItem>
 
                                                                 </>
                                                             )

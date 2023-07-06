@@ -1,5 +1,5 @@
 import { Box, CardMedia, Grid } from "@mui/material"
-
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Instposts = () => {
     const arr = [
@@ -12,13 +12,22 @@ const Instposts = () => {
     ]
     return (
         <>
-            <Grid columns={12} container>
+            <Grid columns={12} container data-aos='fade-up'>
                 {arr.map((each) => {
                     return (
                         <>
                             <Grid item xs={12} sm={4} md={2}>
                                 <Box
+                                    position={'relative'}
                                 >
+                                    <Box
+                                        position={"absolute"}
+                                        bottom={"10px"}
+                                        right={"10px"}
+                                        color={'white'}
+                                    >
+                                        <InstagramIcon />
+                                    </Box>
                                     <CardMedia
                                         component={'img'}
                                         src={each}

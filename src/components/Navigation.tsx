@@ -1,11 +1,12 @@
 import { AppBar, Box, Stack, Toolbar, Typography, styled, Grid, Slide } from '@mui/material'
 import { ColorDark, ColorPrimary, MinorFont } from '../styles/styles'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import Search from './Search';
+
 
 
 
@@ -42,8 +43,35 @@ const Navigation = () => {
                                                 Home
                                             </CustomText>
                                         </NavLink>
-                                        <CustomText>
+                                        <CustomText
+                                            className='pages'
+                                            sx={{ "position": "relative" }}
+                                        >
                                             pages
+                                            <Box
+                                                className='nav-box'
+                                                sx={{ position: "absolute", top: "20px", left: "-20px", zIndex: "100000", background: ColorPrimary, width: { xs: "100%", md: "100px" }, padding: "20px" }}
+                                            >
+                                                <Stack
+                                                    sx={{ direction: "column", alignItems: "flex-start", zIndex: "10000", width: "100%", gap: "20px" }}
+                                                >
+                                                    <NavLink to={'/about'}>
+                                                        <CustomText>
+                                                            About us
+                                                        </CustomText>
+                                                    </NavLink>
+                                                    <NavLink to={"/category"}>
+                                                        <CustomText>
+                                                            Category
+                                                        </CustomText>
+                                                    </NavLink>
+                                                    <NavLink to={'/contact'}>
+                                                        <CustomText>
+                                                            Contact
+                                                        </CustomText>
+                                                    </NavLink>
+                                                </Stack>
+                                            </Box>
                                         </CustomText>
                                         <NavLink to={'/shop'}>
                                             <CustomText>
@@ -62,9 +90,11 @@ const Navigation = () => {
                                 <Box
                                     sx={{ width: "150px", margin: { xs: "0 0", md: "0 auto" } }}
                                 >
-                                    <img
-                                        style={{ "width": "100%", height: "100%", objectFit: "cover" }}
-                                        src='https://uploads-ssl.webflow.com/643cd69e8bc0bcf1b4af13d5/646b5185a94bf985becf351a_Coffe_logo%20(1).svg' />
+                                    <Link to='/'>
+                                        <img
+                                            style={{ "width": "100%", height: "100%", objectFit: "cover" }}
+                                            src='https://uploads-ssl.webflow.com/643cd69e8bc0bcf1b4af13d5/646b5185a94bf985becf351a_Coffe_logo%20(1).svg' />
+                                    </Link>
                                 </Box>
                             </Grid>
                             <Grid item xs={8} md={4}

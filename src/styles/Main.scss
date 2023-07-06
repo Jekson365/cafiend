@@ -28,3 +28,11 @@ a {
 .active {
     text-decoration: underline !important;
 }
+.nav-box {
+    display: none;
+}
+.pages:hover {
+    .nav-box {
+        display: block;
+    }
+}
