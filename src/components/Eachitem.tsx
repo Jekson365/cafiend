@@ -1,8 +1,8 @@
 import { Box, Stack, Typography } from "@mui/material"
-import { ColorDark, MainButtonOutline, MainFontLight, MinorFont } from "../styles/styles"
+import { ColorDark, MinorFont } from "../styles/styles"
 import { Product } from "../data/Products"
 
-const EachProd = ({ prod }: { prod: Product }) => {
+const Eachitem = ({ prod }: { prod: Product }) => {
     return (
         <>
             <Box
@@ -28,18 +28,13 @@ const EachProd = ({ prod }: { prod: Product }) => {
                         textTransform={'uppercase'}
                         variant="h2"
                     >{prod.title}</Typography>
-                    <Typography
-                        fontWeight={'bold'}
-                        fontFamily={MainFontLight}
-                    >$ {prod.price} USD</Typography>
                     <Box mt={1}>
                         <img src={prod.img.toString()} />
                     </Box>
-                    <MainButtonOutline>Add to Cart</MainButtonOutline>
                 </Stack>
             </Box>
         </>
     )
 }
 
-export default EachProd
+export default Eachitem

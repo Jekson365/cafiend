@@ -17,8 +17,56 @@ body {
     font-family: 'Inconsolata', monospace;
 }
 
-a {
+html a {
     text-decoration: none !important;
+}
+
+.lineee {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: black;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    background-color: black;
+}
+
+
+.d-1 {
+    top: 5%;
+}
+
+.d-2 {
+    top: 30%;
+}
+
+.d-3 {
+    top: 55%;
+}
+
+.d-4 {
+    top: 80%;
+}
+
+.dots {}
+
+@media screen and (max-width:'900px') {
+    .lineee {
+        display: none;
+    }
+    .dot {
+        display: none;
+    }
+
 }
 
 .font-bold {
@@ -28,8 +76,9 @@ a {
 .active {
     text-decoration: underline !important;
 }
+
 .teextar {
-    
+
     width: 100%;
     background-color: transparent;
     border-radius: 5px;
@@ -37,13 +86,16 @@ a {
     height: 140px;
     outline: 0;
 }
+
 .teextar::placeholder {
 
     transform: translateY(10px) translateX(10px);
 }
+
 .nav-box {
     display: none;
 }
+
 .pages:hover {
     .nav-box {
         display: block;

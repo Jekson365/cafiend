@@ -5,7 +5,6 @@ import { Product, Products } from "../data/Products"
 
 
 const Prods = ({ variant }: { variant: boolean }) => {
-    const arr = [1, 1, 1, 1, 1, 1]
     return (
         <>
             <Container

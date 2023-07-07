@@ -55,7 +55,7 @@ const Posts = () => {
                 sx={{ background: ColorDark, padding: "100px 0" }}
             >
                 <Typography
-                    sx={{ textAlign: "center", fontSize: { xs: "40px", md: "60px" } }}
+                    sx={{ textAlign: "center", fontSize: { xs: "50px", md: "60px" } }}
                     color={ColorPrimary}
                     fontFamily={MinorFont}
 

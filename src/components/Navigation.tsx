@@ -60,7 +60,7 @@ const Navigation = () => {
                                                             About us
                                                         </CustomText>
                                                     </NavLink>
-                                                    <NavLink to={"/category"}>
+                                                    <NavLink to={"/category/all"}>
                                                         <CustomText>
                                                             Category
                                                         </CustomText>
