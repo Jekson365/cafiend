@@ -28,6 +28,19 @@ a {
 .active {
     text-decoration: underline !important;
 }
+.teextar {
+    
+    width: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    overflow-x: hidden;
+    height: 140px;
+    outline: 0;
+}
+.teextar::placeholder {
+
+    transform: translateY(10px) translateX(10px);
+}
 .nav-box {
     display: none;
 }

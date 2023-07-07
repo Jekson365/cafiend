@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Stack, Typography } from "@mui/material"
 import { ColorPrimary, MainButtonOutline, MainFontLight, MinorFont } from "../styles/styles"
 import EachProd from "../components/EachProd"
+import { Product, Products } from "../data/Products"
 
 
 const Prods = ({ variant }: { variant: boolean }) => {
@@ -29,11 +30,11 @@ const Prods = ({ variant }: { variant: boolean }) => {
                 </Stack>
                 <Box sx={{ maxWidth: "1400px", margin: "40px auto" }}>
                     <Grid container columns={12} spacing={3}>
-                        {arr.map(() => {
+                        {Products.slice(0,6).map((prod : Product) => {
                             return (
                                 <>
                                     <Grid item xs={12} sm={6} md={4} >
-                                        <EachProd />
+                                        <EachProd prod={prod} />
                                     </Grid>
                                 </>
                             )

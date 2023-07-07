@@ -1,7 +1,8 @@
 import { Box, Stack, Typography } from "@mui/material"
 import { ColorDark, MainButtonOutline, MainFontLight, MinorFont } from "../styles/styles"
+import { Product } from "../data/Products"
 
-const EachProd = () => {
+const EachProd = ({ prod }: { prod: Product }) => {
     return (
         <>
             <Box
@@ -25,13 +26,13 @@ const EachProd = () => {
                     <Typography
                         fontFamily={MinorFont}
                         variant="h2"
-                    >FRAPPE</Typography>
+                    >{prod.title}</Typography>
                     <Typography
                         fontWeight={'bold'}
                         fontFamily={MainFontLight}
-                    >$ 57.54 USD</Typography>
+                    >$ {prod.price} USD</Typography>
                     <Box mt={1}>
-                        <img src="https://uploads-ssl.webflow.com/643cd7a284ea6a516516b964/6443cf646a788f7a5e1603fc_1.png" />
+                        <img src={prod.img} />
                     </Box>
                     <MainButtonOutline>Add to Cart</MainButtonOutline>
                 </Stack>

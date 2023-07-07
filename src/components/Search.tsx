@@ -24,7 +24,7 @@ const Search = ({ search, setSearch }: { search: boolean, setSearch: (search: bo
 }
 
 
-const CustomInputFiled = styled(InputBase)({
+export const CustomInputFiled = styled(InputBase)({
     width: "100%",
     border: `0.5px solid ${ColorDark}`,
     borderRadius: "5px",
