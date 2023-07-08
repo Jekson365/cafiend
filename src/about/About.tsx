@@ -3,9 +3,11 @@ import Banner from "../components/Banner"
 import { ColorDark, ColorPrimary, MainFontLight, MinorFont } from "../styles/styles"
 import Gallery from "./Gallery"
 import Timeline from "./Timeline"
+import { useEffect } from "react"
 
 
 const About = () => {
+  useEffect(() => { window.scrollTo(0, 0) }, [])
   return (
     <>
       <Banner title={'ABOUT US'} />
@@ -21,6 +23,7 @@ const About = () => {
                 color={ColorDark}
                 fontFamily={MinorFont}
                 sx={{ marginLeft: { xs: "20px", md: "80px" }, fontSize: { xs: "50px", md: "65px" } }}
+                data-aos='fade-right'
               >
                 THE PERFECT PAIRING: COFFEE AND DESSERTS COMPLEMENT EACH OTHER
               </Typography>
@@ -28,6 +31,7 @@ const About = () => {
             <Grid item xs={12} md={6}>
               <Typography
                 color={ColorDark}
+                data-aos='fade-left'
                 mt={3}
                 fontSize={'17px'}
                 fontWeight={'bold'}
@@ -45,8 +49,8 @@ const About = () => {
           </Grid>
         </Box>
       </Container>
-      <Gallery/>
-      <Timeline/>
+      <Gallery />
+      <Timeline />
     </>
   )
 }

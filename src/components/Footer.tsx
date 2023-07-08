@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <>
             <Container
-                sx={{ background: ColorDark }}
+                sx={{ background: ColorDark}}
                 maxWidth={false}
 
             >

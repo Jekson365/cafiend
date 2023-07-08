@@ -4,21 +4,41 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
 body {
     box-sizing: border-box;
     position: relative;
-    overflow-x: hidden;
 }
 
 .font-light {
     font-family: 'Inconsolata', monospace;
 }
 
+.css-79wznc-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    background-color: #010101;
+    color: white !important;
+    border-bottom: 0 !important;
+    
+}
+
 html a {
+    color: #010101;
     text-decoration: none !important;
+}
+
+body {
+    text-decoration: none !important;
+}
+
+.oop {
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.oop-0 {
+    transition: 0.3s;
+    opacity: 0;
 }
 
 .lineee {
@@ -57,12 +77,25 @@ html a {
     top: 80%;
 }
 
-.dots {}
+.active-cart {
+    transform: translateX(0);
+    opacity: 1;
+    display: block;
+    transition: 0.5s ease-out;
+}
+
+.de-active-cart {
+    display: none;
+    transform: translateX(500px);
+    opacity: 0;
+    transition: 0.5s ease-out;
+}
 
 @media screen and (max-width:'900px') {
     .lineee {
         display: none;
     }
+
     .dot {
         display: none;
     }

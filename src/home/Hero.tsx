@@ -1,11 +1,12 @@
 import { Box, Container, Grid, Stack, Typography } from "@mui/material"
 import { ColorDark, ColorPrimary, MainButtonWhite, MainFontLight, MinorFont } from "../styles/styles"
+import { Link } from "react-router-dom"
 
 const Hero = () => {
     return (
         <>
             <Container
-                sx={{ background: ColorDark}}
+                sx={{ background: ColorDark }}
                 maxWidth={false}
             >
                 <Grid container columns={12}
@@ -44,23 +45,25 @@ const Hero = () => {
                                     help increase alertness and reduce fatigue.It also contains antioxidants and other beneficial compounds.
                                 </Typography>
                                 <MainButtonWhite>
-                                    View More Details
+                                    <Link to={'/about'}>
+                                        View More Details
+                                    </Link>
                                 </MainButtonWhite>
                             </Stack>
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={5}>
                         <Box
-                            sx={{ "position": "relative"}}
+                            sx={{ "position": "relative" }}
                             data-aos='fade-left'
                         >
                             <img src='https://uploads-ssl.webflow.com/643cd69e8bc0bcf1b4af13d5/6448f1f0c5a8a12093bfddfb_Coffee_Png.webp'
                                 style={{ 'width': "100%", height: "100%", objectFit: "cover" }}
                             />
-                            <Box   
+                            <Box
                                 data-aos-delay='200'
                                 data-aos='zoom-in'
-                                sx={{"position":"absolute",bottom:"0",left:"0"}}
+                                sx={{ "position": "absolute", bottom: "0", left: "0" }}
                             >
                                 <img src="https://uploads-ssl.webflow.com/643cd69e8bc0bcf1b4af13d5/6443d1eaea3c13774b0f739e_Stamp.webp" />
                             </Box>

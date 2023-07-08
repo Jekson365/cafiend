@@ -7,7 +7,7 @@ import { useEffect } from "react"
 
 const Category = () => {
   const currentCat = window.location.href.split("/")[4]
-
+  useEffect(() => { window.scrollTo(0, 0) }, [])
   useEffect(() => {
     console.log(currentCat)
   }, [])

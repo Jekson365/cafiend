@@ -4,8 +4,10 @@ import { Link, NavLink } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Search from './Search';
+import Notification from './Notification';
+import { MyContext } from '../App';
 
 
 
@@ -13,19 +15,20 @@ import Search from './Search';
 const Navigation = () => {
     const [nav, setNav] = useState<boolean>(window.innerWidth > 900 ? true : false)
     const [search, setSearch] = useState<boolean>(false)
+    const { setOpen } = useContext(MyContext)
 
     return (
         <>
             <Search search={search} setSearch={setSearch} />
             <Box
-                sx={{ zIndex: "99999999", position: "sticky", top: "0", left: "0" }}
+                sx={{ zIndex: "99999999" }}
             >
+                <Notification />
                 <CustomAppBar
-                    sx={{ marginTop: { xs: "0", md: "0px" }, zIndex: "1000" }}
-
+                    sx={{ marginTop: { xs: "0", md: "0px" }, zIndex: "10000" }}
                 >
                     <CustomToolBar
-                        sx={{ height: "80px" }}
+                        sx={{ height: "80px", position: "sticky", top: "0px" }}
                     >
                         <Grid
                             container
@@ -116,7 +119,9 @@ const Navigation = () => {
                                         <SearchIcon
                                             onClick={() => setSearch(!search)}
                                             sx={{ fontSize: "30px", cursor: "pointer" }} />
-                                        <ShoppingCartIcon sx={{ fontSize: "30px" }} />
+                                        <ShoppingCartIcon
+                                            onClick={() => setOpen(true)}
+                                            sx={{ fontSize: "30px", cursor: "pointer" }} />
                                     </Stack>
                                 </Stack>
                             </Grid>

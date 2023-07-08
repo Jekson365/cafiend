@@ -33,13 +33,14 @@ const Timeline = () => {
                                     paddingLeft={5}
                                     width={'80%'}
                                     gap={'15px'}
-
+                                    data-aos="fade-left"
+                                    
                                     direction={'column'} alignItems={'flex-start'}>
                                     <Typography
                                         textAlign={'center'}
                                         variant="h4"
                                         fontFamily={MinorFont}
-                                    >2000</Typography>
+                                        >2000</Typography>
                                     <Typography
                                         color={ColorDark}
                                         fontFamily={MainFontLight}
@@ -55,13 +56,14 @@ const Timeline = () => {
                             <Grid item xs={12} md={6}>
                                 <Stack
                                     width={'80%'}
+                                    data-aos="fade-right"
                                     gap={'15px'}
                                     direction={'column'}
                                     textAlign={'right'}
                                     alignItems={'flex-end'}
-
+                                    
                                     sx={{ alignItems: { xs: "flex-start", md: "flex-end", textAlign: { xs: "left", md: "right", paddingRight: { xs: "0", md: "40px" } } }, paddingLeft: "40px" }}
-                                >
+                                    >
                                     <Typography
                                         textAlign={'left'}
                                         variant="h4"
@@ -71,7 +73,7 @@ const Timeline = () => {
                                         fontWeight={'bold'}
                                         color={ColorDark}
                                         fontFamily={MainFontLight}
-                                    >
+                                        >
                                         Coffee becomes an important commodity in international trade, particularly in the Middle East and Europe.The first machine is invented in Italy.
                                     </Typography>
                                 </Stack>
@@ -84,13 +86,14 @@ const Timeline = () => {
                                 <Stack
                                     paddingLeft={5}
                                     width={'80%'}
+                                    data-aos="fade-left"
                                     gap={'15px'}
                                     direction={'column'} alignItems={'flex-start'}>
                                     <Typography
                                         textAlign={'center'}
                                         variant="h4"
                                         fontFamily={MinorFont}
-                                    >2016</Typography>
+                                        >2016</Typography>
                                     <Typography
                                         color={ColorDark}
                                         fontFamily={MainFontLight}
@@ -105,22 +108,23 @@ const Timeline = () => {
                             <Grid item xs={12} md={6}>
                                 <Stack
                                     direction={'column'}
+                                    data-aos="fade-right"
                                     textAlign={'right'}
                                     alignItems={'flex-end'}
                                     width={'80%'}
                                     gap={'15px'}
                                     sx={{ alignItems: { xs: "flex-start", md: "flex-end", textAlign: { xs: "left", md: "right", paddingRight: { xs: "0", md: "40px" } } }, paddingLeft: "40px" }}
-                                >
+                                    >
                                     <Typography
                                         textAlign={'left'}
                                         variant="h4"
                                         fontFamily={MinorFont}
-                                    >2020</Typography>
+                                        >2020</Typography>
                                     <Typography
                                         fontWeight={'bold'}
                                         color={ColorDark}
                                         fontFamily={MainFontLight}
-                                    >
+                                        >
                                         Coffee continues to be one of the most popular beverages in the world, with millions of people enjoying it every day. New brewing techniques and flavors continue to emerge.
                                     </Typography>
                                 </Stack>

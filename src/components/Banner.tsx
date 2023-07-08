@@ -16,6 +16,7 @@ const Banner = ({ title }: { title: String }) => {
                     left={'50%'}
                 >
                     <Typography
+                        textAlign={'center'}
                         fontFamily={MinorFont}
                         color={ColorPrimary}
                         variant="h2">{title}</Typography>
